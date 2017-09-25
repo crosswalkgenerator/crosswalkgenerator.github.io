@@ -4,7 +4,7 @@
 		<title>Crosswalk Generator</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>>
+	</head>
 <body>
 		<nav>
     		<ul id="newmenu">
