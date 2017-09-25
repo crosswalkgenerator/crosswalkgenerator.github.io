@@ -1,6 +1,9 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <ul id="newmenu">
 <li><a href="index.html">Home</a></li>
-<li><a href="generator.html">Generator</a></li>
+<li><a href="generator.html"/a></li>
 <li><a href="/about.html">About the Site</a></li>
 <li><a href="/devlog.html">Development</a></li>
 <li><a href="/links.html">Other Tools</a></li>
@@ -19,3 +22,4 @@
 </div>
 </div>
 </div>
+</html>
