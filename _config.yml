@@ -1,0 +1,4 @@
+name: Crosswalk Generator
+markdown: kramdown
+
+theme: jekyll-theme-minimal
