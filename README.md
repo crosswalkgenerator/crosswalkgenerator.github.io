@@ -3,7 +3,7 @@
 
 <ul id="newmenu">
 <li><a href="index.html">Home</a></li>
-<li><a href="generator.html"/a></li>
+<li><a href="generator.html"/a>Generator</li>
 <li><a href="/about.html">About the Site</a></li>
 <li><a href="/devlog.html">Development</a></li>
 <li><a href="/links.html">Other Tools</a></li>
