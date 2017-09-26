@@ -19,13 +19,13 @@
  </body>
      
    <select id="first-choice">
-     <option selected value="base">Select a standard </option>
-    <option value="dc">Dublin Core</option>
-    <option value="marc">MARC</option>
-    <option value="mods">MODS</option>
-    <option value="mets">METS</option>
-    <option value="vra">VRA Core</option>
-</select>
+	   <option selected value="base">Select a standard </option>
+	   	<option value="dc">Dublin Core</option>
+	   	<option value="marc">MARC</option>
+	   	<option value="mods">MODS</option>
+	   	<option value="mets">METS</option>
+	   	<option value="vra">VRA Core</option>
+	</select>
 <select id="second-choice">
   <option selected value="dc">And then another</option>
   <option value="marc">MARC</option>
@@ -42,7 +42,6 @@
     <option value="mods">MARC</option>
     <option value="mets">MODS</option>
     <option value="vra">VRA Core</option>
-</select>
 <option selected value="mods">And then another</option>
   <option value="marc">Dublin Core</option>
     <option value="mods">MARC</option>
@@ -55,6 +54,7 @@
     <option value="vra">MODS</option>
 </select>
 </html>
+
 $("#first-choice").change(function() {
    $("#second-choice").load("textdata/" + $(this).val() + ".txt");
 });
