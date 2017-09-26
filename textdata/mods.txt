@@ -1,0 +1,4 @@
+<option>Dublin Core</option>
+<option>MARC</option>
+<option>METS</option>
+<option>VRA Core</option>
