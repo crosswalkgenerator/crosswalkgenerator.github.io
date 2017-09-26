@@ -28,8 +28,8 @@
 </select>
 <select id="second-choice">
   <option selected value="dc">And then another</option>
-
 </select>
-	
-
 </html>
+$("#first-choice").change(function() {
+   $("#second-choice").load("textdata/" + $(this).val() + ".txt");
+});
