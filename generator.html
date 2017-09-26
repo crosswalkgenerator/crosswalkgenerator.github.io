@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html>
-<body>
-<select>
-  <option value="dc">Dublin Core</option>
-  <option value="marc">MARC</option>
-  <option value="mods">MODS</option>
-  <option value="vra">VRA Core</option>
+name: Generator
+----
+
+<form name="form">
+<select name="url">
+    <option selected="selected" value=""> Select a standard </option>
+    <option value="http://www.loc.gov/marc/marc2dc.html">Dublin Core</option>
+    <option value="marc">MARC</option>
+    <option value="mods">MODS</option>
+    <option value="mets">METS</option>
+    <option value="VRA Core">VRA Core</option>
 </select>
-  
-</body>
+<select name="url">
+    <option selected="selected" value=""> Select a standard </option>
+    <option value="dc">Dublin Core</option>
+    <option value="http://www.loc.gov/marc/marc2dc.html">MARC</option>
+    <option value="mods">MODS</option>
+    <option value="mets">METS</option>
+    <option value="VRA Core">VRA Core</option>
+</select>
+<a href=""
+    onclick="window.open( form.url.value, 'windowName' ); return false"
+    target="_blank">Submit</a>
+</form>
