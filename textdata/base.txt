@@ -1,5 +1,1 @@
-<option>Dublin Core</option>
-<option>MARC</option>
-<option>METS</option>
-<option>MODS</option>
-<option>VRA Core</option>
+<option>And then another</option>
