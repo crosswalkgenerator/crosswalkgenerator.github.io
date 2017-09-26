@@ -13,9 +13,150 @@
   </ul>		
 </head>
 
-| MARC  | Dublin Core | Notes |
-| ------------- | ------------- |
-| 100, 110, 111, 700, 710, 711  | Contributor  | |
-| 720  | | |
+<h2><a name="unqualifiedlist">II. MARC to Dublin Core Crosswalk
+(Unqualified)</a></h2>
+
+<ul>
+	<li>Conventions:
+	<ul>
+	<li>1.&quot;$&quot; is used to specify the subfield used. If none is
+specified, use all subfields.</li>
+<li>2. DC element is repeated if multiple MARC fields are used.</li>
+</ul>
+</li>
+</ul>
+
+<!--<summary>MARC to Dublin Core Crosswalk (Unqualified) </summary> -->
+<!-- <caption>MARC to Dublin Core Crosswalk (Unqualified)</caption> -->
+<table>
+<tr>
+<td scope="col"><strong>MARC fields</strong></td>
+<td scope="col"><strong>DC Element</strong></td>
+<td scope="col"><strong>Implementation Notes</strong></td>
+</tr>
+
+<tr>
+<td>100, 110, 111, 700, 710, 711</td>
+<td rowspan="2">Contributor</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>720</td>
+</tr>
+
+<tr>
+<td>651, 662</td>
+<td rowspan="2">Coverage</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>751, 752</td>
+</tr>
+
+
+<tr>
+<td>&nbsp;</td>
+<td>Creator</td>
+<td>Creator element not used.</td>
+</tr>
+
+<tr>
+<td>008/07-10</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+  <td>260$c$g</td>
+</tr>
+
+<tr>
+<td>500-599, except 506, 530, 540, 546</td>
+<td>Description</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>340</td>
+<td rowspan="2">Format</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>856$q</td>
+</tr>
+
+<tr>
+<td>020$a, 022$a, 024$a</td>
+<td rowspan="2">Identifier</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>856$u</td>
+</tr>
+
+<tr>
+<td>008/35-37</td>
+<td rowspan="3">Language</td>
+<td rowspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td>041$a$b$d$e$f$g$h$j</td>
+</tr>
+<tr>
+<td>546</td>
+</tr>
+
+<tr>
+<td>260$a$b</td>
+<td>Publisher</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>530, 760-787$o$t</td>
+<td>Relation</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>506, 540</td>
+<td>Rights</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>534$t</td>
+<td rowspan="2">Source</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>786$o$t</td>
+</tr>
+
+<tr>
+<td>050, 060, 080, 082</td>
+<td rowspan="2">Subject</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td> 600, 610, 611, 630, 650, 653</td>
+</tr>
+
+<tr>
+<td> 245, 246</td>
+<td>Title</td>
+<td>Repeat dc:title for each. Some applications may wish to include 210, 222,
+  240, 242, 243, and 247. </td>
+</tr>
+
+<tr>
+<td>Leader06, Leader07</td>
+<td rowspan="2">Type</td>
+<td rowspan="2">See Appendix 2 for Leader-Type rules.</td>
+</tr>
+<tr>
+<td>655</td>
+</tr>
+</table>
+
 
 http://www.loc.gov/marc/marc2dc.html
