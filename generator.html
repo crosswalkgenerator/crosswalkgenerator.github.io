@@ -18,23 +18,35 @@
 	</nav>
  </body>
      
-   <select id="first-choice">
-	   <option selected value="base">Select a standard </option>
-	   	<option value="dc">Dublin Core</option>
-	   	<option value="marc">MARC</option>
-	   	<option value="mods">MODS</option>
-	   	<option value="mets">METS</option>
-	   	<option value="vra">VRA Core</option>
-	</select>
-<select id="second-choice">
-  <option>And then another</option>
-</select>
-<button onclick="myFunction()">Generate</button>
+   <select id="standard1" name="standard1" placeholder="any">
+        <option></option>
+        <option>Dublin Core</option>
+        <option>MARC</option>
+        <option>METS</option>
+        <option>MODS</option>
+        <option>VRA Core</option>
+    </select>
 
 <script>
-function myFunction() {
-    window.open("");
-}
+jQuery(function($) {
+    var standard2 = {
+        'Dublin Core': ['MARC', 'METS', 'MODS', 'VRA Core'],
+        'MARC': ['Dublin Core', 'METS', 'MODS', 'VRA Core'],
+        'METS': ['Dublin Core', 'MARC', 'MODS', 'VRA Core'],
+        'MODS': ['Dublin Core', 'MARC', 'METS', 'VRA Core'],
+        'VRA Core': ['Dublin Core', 'MARC', 'METS', 'MODS'],
+    }
+    
+    var $standard2 = $('#location');
+    $('#standard1').change(function () {
+        var standard1 = $(this).val(), std2 = standard2[standard1] || [];
+        
+        var html = $.map(std2, function(std){
+            return '<option value="' + std + '">' + std + '</option>'
+        }).join('');
+        $standard2.html(html)
+    });
+});
 </script>
 	
 	<footer>
