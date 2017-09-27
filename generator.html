@@ -4,8 +4,8 @@
 		<title>Crosswalk Generator</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-<body>
+	
+
 	<nav>
 		<ul id="newmenu">
 			<li><a href="/index.html">Home</a></li>
@@ -16,18 +16,7 @@
 			<li><a href="https://ashleynicolelyons.wordpress.com/professional-experience-development/resume/">Hire Me!</a></li>
 		</ul>
 	</nav>
- </body>
-     
-   <select id="standard1" name="standard1" placeholder="any">
-        <option></option>
-        <option>Dublin Core</option>
-        <option>MARC</option>
-        <option>METS</option>
-        <option>MODS</option>
-        <option>VRA Core</option>
-    </select>
-
-<script>
+	<script>
 jQuery(function($) {
     var standard2 = {
         'Dublin Core': ['MARC', 'METS', 'MODS', 'VRA Core'],
@@ -48,7 +37,18 @@ jQuery(function($) {
     });
 });
 </script>
-	
+</head>
+   <body> 
+   <select id="standard1" name="standard1" placeholder="any">
+        <option></option>
+        <option>Dublin Core</option>
+        <option>MARC</option>
+        <option>METS</option>
+        <option>MODS</option>
+        <option>VRA Core</option>
+    </select>
+
+	 </body>
 	<footer>
 	<ul>
 		<p>This site is available under the <a href="https://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License (v2)</a>. Check it out <a href="https://github.com/crosswalkgenerator/crosswalkgenerator.github.io">on GitHub</a>.</p>
