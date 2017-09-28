@@ -15,8 +15,8 @@
 		</ul>
 	</nav>
 	<hr>
-
-        <title>Crosswalk Generator</title>
+        <head>
+ <title>Crosswalk Generator</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script language="javascript" type="text/javascript">
             function dynamicdropdown(listindex)
@@ -64,10 +64,10 @@
                 return true;
             }
        </script>
-    </head>
-    <title>Dynamic Drop Down List</title>
-    <body>
-        <div class="category_div" id="category_div">
+</head>
+
+<body>
+<form id="submitUrl">
             <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                 <option value="">Select a Standard</option>
                 <option value="dc">Dublin Core</option>
@@ -76,9 +76,8 @@
                 <option value="mods">MODS</option>
                 <option value="vra">VRA Core</option>
             </select>
-        </div>
-        <div class="sub_category_div" id="sub_category_div">
-            <script type="text/javascript" language="JavaScript">
+
+	 <script type="text/javascript" language="JavaScript">
                 document.write('<select name="subcategory" id="subcategory"><option value="">Select a Standard</option></select>')
             </script>
             <noscript>
@@ -86,8 +85,54 @@
                     <option value="">Select a Standard</option>
                 </select>
             </noscript>
-        </div>
-    </body>   
+
+	<button type="submit">Generate!</button>
+</form>
+
+<script>
+(function(window,undefined){
+
+	var f=function(event){
+		
+		var selects=this.getElementsByTagName('select');console.log(selects);
+		
+		if(selects.length>1)
+		{
+			event.preventDefault();
+			
+			this.action='http://crosswalkgenerator.github.io/tables/'+selects[0].value+'_'+selects[1].value;
+			
+			window.open(this.action);
+		}
+		
+	};
+
+	if(window.jQuery)
+	{
+		jQuery(document).ready(function(){
+			jQuery('#submitUrl').submit(f);
+		});
+	}
+	else
+	{
+		window.onload=function(){
+			var x=function(){
+				document.getElementById('submitUrl').onsubmit=f;
+			};
+			
+			if(document)
+			{
+				x();
+			}
+			else
+			{
+				setTimeout(x,200);
+			}
+		};
+	}
+})(window);
+</script>
+</body>
 	<footer>
 	<ul>
 		<p>This site is available under the <a href="https://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License (v2)</a>. Check it out <a href="https://github.com/crosswalkgenerator/crosswalkgenerator.github.io">on GitHub</a>.</p>
