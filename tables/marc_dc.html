@@ -15,6 +15,8 @@ th, td {
 	
 </style>
 </head>
+
+	<a href="http://www.loc.gov/marc/marc2dc.html"
 <h2>MARC to Dublin Core Crosswalk (Unqualified)</h2>
 <table>
 	
@@ -147,7 +149,487 @@ th, td {
 </tr>
 </table>
 
+<br>
 
-http://www.loc.gov/marc/marc2dc.html
+<h2><a name="qualifiedlist">III. MARC to Dublin Core Crosswalk (Qualified)</a></h2>
+<br>
+<!--<summary>MARC to Dublin Core Crosswalk (Unqualified) </summary> -->
+<!-- <caption>MARC to Dublin Core Crosswalk (Unqualified)</caption> -->
+<table>
+<tr>
+<td><strong>MARC fields</strong></td>
+<td><strong>DC Element</strong></td>
+<td><strong>DC Qualifier(s)</strong></td>
+<td><strong>Implementation Notes</strong></td>
+</tr>
+
+<tr>
+<td>541$c</td>
+<td>Accrual Method</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>310$a</td>
+<td>Accrual Periodicity</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>521</td>
+<td>Audience</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>100, 110, 111, 700, 710, 711$e</td>
+<td rowspan="2">Contributor</td>
+<td rowspan="2">Value in $e. </td>
+<td rowspan="2">Roles may be used as refinements of Contributor if using
+  qualified DC. See &quot;Roles&quot; <a href="#notes">note</a> below.</td>
+</tr>
+<tr>
+<td>720$e</td>
+</tr>
+
+<tr>
+<td>255, 034 </td>
+<td rowspan="4">Coverage</td>
+<td rowspan="4">Spatial</td>
+<td>Some 255 information equivalent to DC encoding scheme but different syntax.</td>
+</tr>
+<tr>
+<td>522</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>650$z, 651, 662 </td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>751, 752 </td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>043$c,044$c</td>
+<td rowspan="2">Coverage</td>
+<td>Spatial<br>
+ ISO3166</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>651 if  ind2=7 &amp; $2=tgn</td>
+<td>Spatial<br>
+ TGN</td>
+<td>&nbsp;</td>
+</tr>
+
+
+
+
+<tr>
+<td>033$a</td>
+<td rowspan="2">Coverage</td>
+<td rowspan="2">Temporal</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>533$b</td>
+</tr>
+
+<tr>
+<td>260$c if precedes date</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">Copyrighted</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>542$g</td>
+<td>This field was defined in MARC in January 2008.</td>
+</tr>
+
+
+
+
+
+<tr>
+<td>260$c$g</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">Created</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>533$d</td>
+</tr>
+
+<tr>
+<td>008/07-10</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">Issued</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>260$c</td>
+</tr>
+
+<tr>
+<td>046$j</td>
+<td>Date</td>
+<td>Modified</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>046$m$n</td>
+<td>Date</td>
+<td>Valid</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>520 if ind1=# or 3 </td>
+<td>Description</td>
+<td>Abstract</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>505</td>
+<td>Description</td>
+<td>TableofContents</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>300$a</td>
+<td rowspan="4">Format</td>
+<td rowspan="2">Extent</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+  <td>533$e</td>
+</tr>
+<tr>
+<td>856$q</td>
+<td>IMT</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>340$a</td>
+<td>Medium</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>856$u</td>
+<td>Identifier</td>
+<td>URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>008/35-37</td>
+<td rowspan="6">Language</td>
+<td>IS0369-2</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>041 with no $2</td>
+<td>ISO639-2</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+  <td>041 with $2=iso639-3</td>
+  <td>ISO639-3</td>
+</tr>
+<tr>
+<td>041 with $2=rfc1766 </td>
+<td>RFC1766</td>
+<td rowspan="3">&nbsp;</td>
+</tr>
+<tr>
+  <td>041 with $2=rfc3066</td>
+  <td>RFC3066</td>
+</tr>
+<tr>
+  <td>041 with $2=rfc4646</td>
+  <td>RFC4646</td>
+</tr>
+
+<tr>
+<td>561</td>
+<td>Provenance</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>530</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">HasFormat</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+
+<tr>
+<td>776$n$t</td>
+</tr>
+
+<tr>
+<td>530$u</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">HasFormat<br>
+ URI</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+
+<tr>
+<td>776$o</td>
+</tr>
+
+
+<tr>
+<td>774$n$t</td>
+<td>Relation</td>
+<td>HasPart</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>774$o</td>
+<td>Relation</td>
+<td>HasPart<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+
+
+
+<tr>
+<td>775$n$t</td>
+<td>Relation</td>
+<td>HasVersion </td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>775$o</td>
+<td>Relation</td>
+<td>HasVersion<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>530</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">IsFormatOf</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>776$n$t</td>
+</tr>
+
+<tr>
+<td>530$u</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">IsFormatOf<br>
+ URI</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>776$o</td>
+</tr>
+
+
+
+<tr>
+<td>440, 490, 800, 810, 811, 830
+<td rowspan="2">Relation</td>
+<td rowspan="2">IsPartOf</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+
+<tr>
+<td>760, 773$n$t</td>
+</tr>
+
+<tr>
+<td>760, 773$o</td>
+<td>Relation</td>
+<td>IsPartOf<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>510</td>
+<td>Relation</td>
+<td>IsReferencedBy</td>
+<td>&nbsp;</td>
+</tr>
+
+
+
+<tr>
+<td>785$n$t</td>
+<td>Relation</td>
+<td>IsReplacedBy</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>785$o</td>
+<td>Relation</td>
+<td>IsReplacedBy<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>775,786$n$t</td>
+<td>Relation</td>
+<td>IsVersionOf</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>775, 786$o</td>
+<td>Relation</td>
+<td>IsVersionOf<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>780$n$t</td>
+<td>Relation</td>
+<td>Replaces</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>780$o</td>
+<td>Relation</td>
+<td>Replaces<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>538</td>
+<td>Relation</td>
+<td>Requires</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>506$a$d</td>
+<td rowspan="2">Rights</td>
+<td rowspan="2">AccessRights</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>540$a$d</td>
+</tr>
+
+<tr>
+<td>542$d</td>
+<td>Rights</td>
+<td>RightsHolder</td>
+<td>This field was defined in MARC in January 2008.</td>
+</tr>
+
+
+<tr>
+<td>786$o</td>
+<td>Source</td>
+<td>URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>082</td>
+<td>Subject</td>
+<td>DDC</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>050</td>
+<td>Subject</td>
+<td>LCC</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>600, 610, 611, 630, 650 if ind2=0 </td>
+<td>Subject</td>
+<td>LCSH</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>600, 610, 611, 630, 650 if ind2=2 </td>
+<td>Subject</td>
+<td>MeSH</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>060</td>
+<td>Subject</td>
+<td>NLM</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>655 if ind2=7 &amp; $2=tgn </td>
+<td>Subject</td>
+<td>TGN</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>080</td>
+<td>Subject</td>
+<td>UDC</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>245</td>
+<td>Title</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>130, 210, 240, 242, 246, 730, 740</td>
+<td>Title</td>
+<td>Alternative</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>Leader06, Leader07</td>
+<td rowspan="2">Type</td>
+<td rowspan="2">DCMI Type Vocabulary</td>
+<td>See Appendix 2 for Leader-Type rules.<br></td>
+</tr>
+<tr>
+<td>655 if $2=dct</td>
+<td>&nbsp;</td>
+</tr>
+</table>
 	
 </html>
