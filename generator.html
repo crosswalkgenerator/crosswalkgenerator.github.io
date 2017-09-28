@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Crosswalk Generator</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -16,65 +16,80 @@
 			<li><a href="https://ashleynicolelyons.wordpress.com/professional-experience-development/resume/">Hire Me!</a></li>
 		</ul>
 	</nav>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script language="javascript" type="text/javascript">
-    function dynamicdropdown(listindex)
-    {
-        switch (listindex)
-        {
-        case "dc" :
-            document.getElementById("standard2").options[0]=new Option("Select Standard","");
-            document.getElementById("standard2").options[1]=new Option("MARC","marc");
-            document.getElementById("standard2").options[2]=new Option("METS","mets");
-            document.getElementById("standard2").options[3]=new Option("MODS","mods");
-            break;
-        case "marc" :
-            document.getElementById("standard2").options[0]=new Option("Select a Standard","");
-            document.getElementById("standard2").options[1]=new Option("Dublin Core","dc");
-            document.getElementById("standard2").options[2]=new Option("METS","mets");
-            document.getElementById("standard2").options[3]=new Option("MODS","mods");
-            case "mets" :
-            document.getElementById("standard2").options[0]=new Option("Select a Standard","");
-            document.getElementById("standard2").options[1]=new Option("Dublin Core","dc");
-            document.getElementById("standard2").options[2]=new Option("MARC","marc");
-            document.getElementById("standard2").options[3]=new Option("MODS","mods");
-            case "mods" :
-            document.getElementById("standard2").options[0]=new Option("Select a Standard","");
-            document.getElementById("standard2").options[1]=new Option("Dublin Core","dc");
-            document.getElementById("standard2").options[2]=new Option("MARC","marc");
-            document.getElementById("standard2").options[3]=new Option("METS","mets");
-            break;
-        }
-        return true;
-    }
-    </script>
+
+        <title>Crosswalk Generator</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex)
+            {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "dc" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    
+                    case "marc" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "mets" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "mods" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "vra" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[4]=new Option("MODS","MODS");
+                        break;
+                }
+                return true;
+            }
+       </script>
     </head>
+    <title>Dynamic Drop Down List</title>
     <body>
-    <div class="category_div" id="category_div">
-        <select id="standard1" name="standard1" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-        <option value="">Select a Standard</option>
-        <option value="dc">Dublin Core</option>
-        <option value="marc">MARC</option>
-        <option value="mets">METS</option>
-        <option value="mods">MODS</option>
-        </select>
-    </div>
-    <div class="sub_category_div" id="sub_category_div">
-        <script type="text/javascript" language="JavaScript">
-        document.write('<select name="standard2" id="standard2"><option value="">Select a Standard</option></select>')
-        </script>
-        <noscript>
-        <select id="standard2" name="standard2">
-        <option value="">Select a Standard</option>
-        <option value="dc">Dublin Core</option>
-        <option value="marc">MARC</option>
-        <option value="mets">METS</option>
-        <option value="mods">MODS</option>
-        </select>
-        </noscript>
-    </div>
+        <div class="category_div" id="category_div">
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select a Standard</option>
+                <option value="dc">Dublin Core</option>
+                <option value="marc">MARC</option>
+                <option value="mets">METS</option>
+                <option value="mods">MODS</option>
+                <option value="vra">VRA Core</option>
+            </select>
+        </div>
+        <div class="sub_category_div" id="sub_category_div">
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory"><option value="">Select a Standard</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Select a Standard</option>
+                </select>
+            </noscript>
+        </div>
     </body>
-	 </body>
+</html>   
 	<footer>
 	<ul>
 		<p>This site is available under the <a href="https://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License (v2)</a>. Check it out <a href="https://github.com/crosswalkgenerator/crosswalkgenerator.github.io">on GitHub</a>.</p>
