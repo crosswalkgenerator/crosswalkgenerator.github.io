@@ -1,2 +1,4 @@
 name: Crosswalk Generator
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
