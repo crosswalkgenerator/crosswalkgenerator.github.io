@@ -1,0 +1,97 @@
+<html>
+<head>
+		<title>Crosswalk Generator</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<h1>Crosswalk Generator</h1>
+	<nav>
+		<ul id="newmenu">
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="/generator.html"/a>Generator</li>
+			<li><a href="/about.html">About the Site</a></li>
+			<li><a href="/devlog.html">Development</a></li>
+			<li><a href="/links.html">Other Tools</a></li>
+			<li><a href="https://ashleynicolelyons.wordpress.com/professional-experience-development/resume/">Hire Me!</a></li>
+		</ul>
+	</nav>
+	<hr>
+
+        <title>Crosswalk Generator</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex)
+            {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "dc" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    
+                    case "marc" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "mets" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "mods" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "vra" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[4]=new Option("MODS","MODS");
+                        break;
+                }
+                return true;
+            }
+       </script>
+    </head>
+    <title>Dynamic Drop Down List</title>
+    <body>
+        <div class="category_div" id="category_div">
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select a Standard</option>
+                <option value="dc">Dublin Core</option>
+                <option value="marc">MARC</option>
+                <option value="mets">METS</option>
+                <option value="mods">MODS</option>
+                <option value="vra">VRA Core</option>
+            </select>
+        </div>
+        <div class="sub_category_div" id="sub_category_div">
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory"><option value="">Select a Standard</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Select a Standard</option>
+                </select>
+            </noscript>
+        </div>
+    </body>   
+	<footer>
+	<ul>
+		<p>This site is available under the <a href="https://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License (v2)</a>. Check it out <a href="https://github.com/crosswalkgenerator/crosswalkgenerator.github.io">on GitHub</a>.</p>
+	</ul>
+	
+</footer>
+</html>
