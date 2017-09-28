@@ -1,4 +1,0 @@
-<option>MARC</option>
-<option>METS</option>
-<option>MODS</option>
-<option>VRA Core</option>
