@@ -1,1 +1,382 @@
+<html>
+<head>
+		<title>Crosswalk Generator</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+th, td {
+    padding: 10px;
+	
+</style>
+</head>
+  <a href="http://www.loc.gov/marc/marc2dc.html">
+	<h1>Dublin Core to MARC Crosswalk</h1>
+	</a>
+  <p>(15 elements in version 1.1 and refinements)</p>
+  
+ <p class="term">Contributor -- An entity responsible for making contributions to the resource.</p>
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>720 ##$a (Added Entry--Uncontrolled Name/Name)</li> 
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Element refinements may be used from the MARC relator list for those specified roles that refine dc:contributor. If DC metadata includes a role refinement (only used for Contributor), use the term in 720$e or the code in 720$t. See: <a href="http://dublincore.org/usage/documents/relators/index.shtml#A1">
+MARC Relator Terms and Dublin Core</a></li>
+</ul>
+</li>
+</ul>
 
+<p>Note: there is no way to specify whether the Contributor is a person or organization because it is not in the Dublin Core data. If it can reasonably be determined that the contributor is a person or organization, fields 700 1#$a (Added Entry--Personal Name) or 710 2#$a (Added Entry--Corporate Name) may be used. </p>
+
+<p class="term">Coverage -- The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which he resource is relevant.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>500$a (General note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Spatial: 522  ##$a (Geographic Coverage Note)</li> 
+<li>Temporal: 513 ##$b (Type of Report and Period Covered Note/Period
+covered)</li>
+</ul>
+</li>
+</ul>
+
+
+<ul>
+<li><span class="listheader">Syntax encoding schemes:</span> 
+<ul>
+<li>Box: 507$a (Scale Note for Graphic Material)</li>
+<li>ISO3166: 043$c with $2 iso3166 
+(Geographic Area Code/ISO code)</li>
+<li>Point: 507$a (Scale Note for Graphic Material)</li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><span class="listheader">Vocabulary encoding scheme under spatial:</span> 
+<ul>
+<li>TGN: 651 #7 $a (Subject Added Entry--Geographic Name) 
+with $2=tgn</li>
+<li> Period: 045 0# $b (Time Period of Content/Formatted 9999 B.C. through C.E. time period)</li>
+</ul> 
+</li>
+</ul>
+
+<p class="term">Creator -- An entity primarily responsible for making 
+the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>720 ##$a (Added Entry--Uncontrolled Name/Name) 
+with $e=author</li>
+</ul>
+</li>
+</ul>
+
+<p>Note: there is no way to specify whether the Creator is a person or organization
+  because it is not in the Dublin Core data. If it can reasonably be determined that the Creator is  a person or organization, fields 100 1#$a (Main Entry--Personal Name) or 110 2#$a (Main Entry--Corporate Name) may be used for the first Creator, and 700 1#$a (Added Entry--Personal Name) or 7102#$a (Added Entry--Corporate Name) for others may be used.</p>
+
+<p class="term">Date -- A point or period of time associated 
+with an event in the lifecycle of the resource.</p>
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>260 ##$c (Date of publication, distribution, etc.)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Available: 307 ##$a (Hours, Etc.)</li>
+      <li>Created: 046$k (Special Coded Dates/Date created)</li> 
+      <li>Date Accepted: 502##$a (Dissertation Note) with initial label &quot;Date accepted&quot;</li>
+      <li>Date Copyrighted:
+              260##$c (Date of publication, distribution, etc.) or 542 $g (Information Related to Copyright Status/Copyright date) <em>Note: this field was defined in MARC in January 2008. Prefer 542 if field is available.</em></li>
+      <li>Date Submitted: 502##$a (Dissertation Note) with initial label &quot;Date submitted&quot;</li>
+      <li>Issued: 260 ##$c (Date of publication, distribution, etc.)</li>
+      <li>Modified: 046##$j (Special Coded Dates/Date modified) </li>
+      <li>Valid: 046##$m (Special Coded Dates/Date valid)</li>   
+    </ul>
+</li>
+</ul>
+	
+<ul>
+<li><span class="listheader">Syntax encoding schemes:</span>
+  <ul>
+  <li>Period: 045##c  (Special Coded Dates/Date 1, C.E. date) </li>
+      <li>W3CDTF: 260 ##$c (Date of publication, distribution, etc.); date may also be generated in 008/07-10; see below under Notes. Remove hyphens in 008. </li>
+    </ul>
+</li>
+</ul>
+
+<p class="term">Description -- An account of the resource.</p>
+
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>520 ##$a (Summary, etc. note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Abstract: 520 ##$a (Summary, etc. note)</li>
+<li>TableofContents: 505 0#$a (Formatted Contents Note)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Format -- The file format, physical medium, or dimensions
+  of the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>856 ##$q (Electronic Location and Access/Electronic format type)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>Extent: 300 ##$a (Physical Description)</li>
+<li>Medium: 340 ##$a (Physical Medium)</li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><span class="listheader">Syntax encoding scheme:</span>
+<ul>
+  <li>IMT: 856 ##$q (Electronic Location and Access/Electronic Format
+    Type) </li>
+	</ul>
+</li>
+</ul>
+	
+<p class="term">Identifier -- An unambiguous reference to the resource within
+  a given context.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>If string begins http://: 856 40 $u (Electronic Location and Access/URI) </li>
+<li>Otherwise: 024 8#$a (Other Standard Identifier/Standard number or code)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Bibliographic Citation: 500 ##a (General note) with initial label &quot;Bibliographic citation&quot;</li>
+</ul>
+</li>
+</ul>
+
+
+<ul>
+<li><span class="listheader">Syntax encoding scheme:</span>
+<ul>
+  <li>URI: 856 40$u (Electronic Location and Access/Uniform Resource Locator)</li>
+</ul>
+</li>
+</ul>
+
+<p>Note: other types of identifiers (e.g. ISSN, ISBN) may be expressed in the form of URIs in dc:identifier.</p>
+
+<p class="term">Language -- A language of the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>546 ##$a (Language note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span></li>
+</ul>
+
+
+<ul>
+<li><span class="listheader">Syntax encoding schemes:</span>
+<ul>
+  <li>ISO 639-2: 0410#$a (Language code)</li>
+    <li>RFC 1766: 041 07$a (Language code) with $2=rfc1766</li>
+  <li>RFC 3066: 041 07$a (Language code) with $2=rfc3066</li>
+  <li>RFC 4646: 041 07$a (Language code) with $2=rfc4646  </li>
+</ul>
+</li>
+</ul>  
+
+<p class="term">Publisher -- An entity responsible for making the resource
+  available.</p>
+  
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>260 ##$b (Publication, Distribution, etc. (Imprint)/Name of publisher, distributor, etc.) </li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Relation -- A related resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>787 0#$n (Nonspecific Relationship Entry/Note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>URI (Encoding scheme): 787 0#$o (Nonspecific Relationship Entry/Other identifier)</li>
+  <li>Conforms To:   
+  787 0#$n (Nonspecific Relationship Entry/Other identifier)
+  with $i=Conforms to</li>
+  <li>HasFormat: 776 0#$n (Additional Physical Form Entry/Note)</li> 
+  <li>HasFormat: (Scheme=URI): 776 0#$o (Additional Physical Form Entry/Other identifier) </li>
+<li>IsFormatOf: 776 0#$n (Additional Physical Form Entry/Note) </li>
+<li>IsFormatOf: (Scheme=URI): 776 0#$o (Additional Physical Form Entry/Other identifier) </li>
+<li>IsPartOf: 773 0#$n (Host Item Entry/Note) </li>
+<li>IsPartOf (Scheme=URI): 773 0#$o (Host Item Entry/Other identifier)</li>
+<li>HasPart: 774 0#$n (Constituent Unit Entry/Note)</li>
+<li>HasPart (Scheme=URI): 774 0#$o (Constituent Unit Entry/Other identifier) </li>
+<li>IsVersionOf: 775 0#$n (Other Edition Entry/Note) </li>
+<li>IsVersionOf (Scheme=URI): 775 0#$o (Other Edition Entry/Other identifier)</li>
+<li>HasVersion: 775 0#$n (Other Edition Entry/Note)</li>
+<li>HasVersion (Scheme=URI): 775 0#$o (Other Edition Entry/Other identifier)</li>
+<li>Is Based On: 786 0#$n (Data Source Entry/Note) </li>
+<li>Is Based On (Scheme=URI): 786 0#$o (Data Source Entry/Other identifier)</li> 
+<li>Is Referenced By: 510 0#$a (Citation/References Note/Name of source)</li>
+<li>Requires: 538 ##$a (System Details Note)</li>
+<li>Is Required By: 
+787 0#$n (Nonspecific Relationship Entry/Other identifier)
+  with $i=Is required by </li>
+<li>Replaces: 780 00$n (Preceding entry)</li>
+<li>Replaces (Scheme=URI): 780 00$o (Preceding entry)</li>
+<li>Is Replaced By: 785 00$n (Succeeding entry)</li>
+<li>Is Replaced By (Scheme=URI): 785 00$o (Succeeding entry)</li>
+<li>References:  
+787 0#$n (Nonspecific Relationship Entry/Other identifier)
+  with $i=References </li>
+<li>References (Scheme=URI):  
+787 0#$o (Nonspecific Relationship Entry/Other identifier)
+  with $i=References</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Rights -- Information about rights held in and over the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>540 ##$a (Terms Governing Use and Reproduction Note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>Access Rights: 506##$a (Restrictions on Access Note)</li>
+  <li>License: 540##$a (Terms Governing Use and Reprofuction Note</li>
+  <li>License (if value is a URI): 540##$u </li>
+  </ul>
+  </li>
+  </ul>
+  
+<p class="term">Source --   A related resource from which the described resource is derived.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>786 0#$n (Data Source Entry/Note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+</li>
+</ul>
+
+<ul>
+<li><span class="listheader">Syntax encoding scheme</span>
+<ul>
+<li>URI : 786 0#$o (Data Source Entry/Other identifier)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Subject -- The topic of the resource.</p>
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>653 ##$a (Index Term--Uncontrolled)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span></li>
+</ul>
+
+<ul>
+<li><span class="listheader">Vocabulary encoding schemes:</span>
+<ul>
+<li>DDC: 082 ##$a (Dewey Decimal Call Number/Classification number)</li>
+<li>LCC: 050 ##$a (Library of Congress Call Number/Classification
+  number)</li>
+<li>LCSH: 650 #0$a (Subject added entry--Topical term)</li>
+<li>MeSH: 650 #2$a (Subject added entry--Topical term)</li>
+<li>UDC: 080 ##$a (Universal Decimal Classification Number)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Title -- A name given to the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>245 00$a (Title Statement/Title proper)</li>
+<li>If repeated, all titles after the first: 246 33$a (Varying Form of Title/Title proper)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>Alternative: 246 33$a (Varying Form of Title/Title proper)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Type --  The nature or genre of the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>655 #7$a (Index Term--Genre/Form) with $2=local</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>DCMI Type vocabulary (Encoding scheme): 655 #7$a (Index Term--Genre/Form) with $2=dct</li>
+</ul>
+</li>
+</ul>
+
+<p>See Section III for use to determine
+  Leader/06 (Type of Record) values.</p>
+  
+<h2>III. Additional Dublin Core Elements </h2>
+
+<ul>
+<li><strong>Accrual Method: </strong>541##$c (Source of Acquisition Note)</li>
+<li><strong>Accrual Periodicity: </strong>310##$a (Current Publication Frequency)</li>
+<li><strong>  Audience: </strong>521##$a (Target Audience Note)</li><li><strong>Education Level: </strong>521##$a (Target Audience 
+Note)</li>
+<li><strong>Provenance: </strong>561##$a  (Ownership and Custodial History)</li>
+</ul>
+  </head>
+  
