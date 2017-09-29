@@ -67,7 +67,11 @@
 </head>
 
 <body>
-<form id="submitUrl">
+
+            <div class="row">
+
+                <div class="medium-6 columns">
+	<form id="submitUrl">
             <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                 <option value="">Select a Standard</option>
                 <option value="dc">Dublin Core</option>
@@ -76,7 +80,8 @@
                 <option value="mods">MODS</option>
                 <option value="vra">VRA Core</option>
             </select>
-
+		</div>	
+		<div class="medium-6 columns">
 	 <script type="text/javascript" language="JavaScript">
                 document.write('<select name="subcategory" id="subcategory"><option value="">Select a Standard</option></select>')
             </script>
@@ -85,7 +90,8 @@
                     <option value="">Select a Standard</option>
                 </select>
             </noscript>
-
+		</div>
+		    </div>
 	<button type="submit">Generate!</button>
 </form>
 
