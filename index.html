@@ -19,17 +19,121 @@
 <body>
 <div class="container">
     		<div class="blurb">
-<p>Welcome! The goal of this tool is simple: gather as many of the most commonly-used library metadata crosswalks in one place as possible. Simply choose a standard from each menu and hit submit, and you will be redirected to a table with the relevant crosswalk conventions. If a crosswalk requires more information than a standard table can provide, the page will include relevant links and notes with more details.</p>
-<p>To learn more <a href="/about.html">about the site</a>, to follow its <a href="/devlog.html">development progress</a>, or to find out more about <a href="https://ashleynicolelyons.wordpress.com/professional-experience-development/resume/">its creator</a>, see the relevant links above. You will also find links to other resources that catalogers might find handy under <a href="/links.html">Other Tools</a>.</p> 
-</div><!-- /.blurb -->
-		</div><!-- /.container -->
- </body>
-<footer>
-	<ul>
-		<p>This site is available under the <a href="https://www.gnu.org/licenses/gpl-2.0.txt">GNU General Public License (v2)</a>. Check it out <a href="https://github.com/crosswalkgenerator/crosswalkgenerator.github.io">on GitHub</a>.</p>
-	</ul>
-	
-</footer>
+<p>Welcome! The goal of this tool is simple: gather as many of the most commonly-used library metadata crosswalks in one place as possible. Simply choose a standard from each menu and hit submit, and you will be redirected to a page with the relevant crosswalk conventions. If a crosswalk requires more information, the page will include relevant links and notes with more details.</p> 
+
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex)
+            {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "dc" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    
+                    case "marc" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "mets" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "mods" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
+                        break;
+                    case "vra" :
+                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                        document.getElementById("subcategory").options[4]=new Option("MODS","MODS");
+                        break;
+                }
+                return true;
+            }
+       </script>
+</head>
+
+<body>
+<form id="submitUrl">
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select a Standard</option>
+                <option value="dc">Dublin Core</option>
+                <option value="marc">MARC</option>
+                <option value="mets">METS</option>
+                <option value="mods">MODS</option>
+                <option value="vra">VRA Core</option>
+            </select>
+
+	 <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory"><option value="">Select a Standard</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Select a Standard</option>
+                </select>
+            </noscript>
+
+	<button type="submit">Generate!</button>
+</form>
+
+<script>
+(function(window,undefined){
+	var f=function(event){
+		
+		var selects=this.getElementsByTagName('select');console.log(selects);
+		
+		if(selects.length>1)
+		{
+			event.preventDefault();
+			
+			this.action='http://crosswalkgenerator.github.io/tables/'+selects[0].value+'_'+selects[1].value;
+			
+			window.open(this.action);
+		}
+		
+	};
+	if(window.jQuery)
+	{
+		jQuery(document).ready(function(){
+			jQuery('#submitUrl').submit(f);
+		});
+	}
+	else
+	{
+		window.onload=function(){
+			var x=function(){
+				document.getElementById('submitUrl').onsubmit=f;
+			};
+			
+			if(document)
+			{
+				x();
+			}
+			else
+			{
+				setTimeout(x,200);
+			}
+		};
+	}
+})(window);
+</script>	
 
   </body>
 </html>
