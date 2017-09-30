@@ -1,4 +1,0 @@
-<option>Dublin Core</option>
-<option>METS</option>
-<option>MODS</option>
-<option>VRA Core</option>
