@@ -24,42 +24,56 @@
                 document.getElementById("subcategory").length = 0;
                 switch (listindex)
                 {
-                    case "dc" :
+                    case "bib" :
+ 			document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+ 			document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
+ 			document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+ 			document.getElementById("subcategory").options[3]=new Option("METS","mets");
+ 			document.getElementById("subcategory").options[4]=new Option("MODS","MODS");
+			document.getElementById("subcategory").options[5]=new Option("Vra Core","vra");
+				break;
+			
+			case "dc" :
+                         document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+ 			document.getElementById("subcategory").options[1]=new Option("BIBFRAME","bib");
+                         document.getElementById("subcategory").options[2]=new Option("MARC","marc");
+                         document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                         document.getElementById("subcategory").options[4]=new Option("MODS","mods");
+                         document.getElementById("subcategory").options[5]=new Option("VRA Core","vra");
+                         break;
+                     
+                     case "marc" :
                         document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
-                        document.getElementById("subcategory").options[1]=new Option("MARC","marc");
-                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
-                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
-                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
-                        break;
-                    
-                    case "marc" :
-                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
-                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
-                        document.getElementById("subcategory").options[2]=new Option("METS","mets");
-                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
-                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
-                        break;
-                    case "mets" :
-                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
-                       document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
-                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
-                        document.getElementById("subcategory").options[3]=new Option("MODS","mods");
-                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
-                        break;
-                    case "mods" :
-                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
-                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
-                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
-                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
-                        document.getElementById("subcategory").options[4]=new Option("VRA Core","vra");
-                        break;
+ 			document.getElementById("subcategory").options[1]=new Option("BIBFRAME","bib");
+                         document.getElementById("subcategory").options[2]=new Option("Dublin Core","dc");
+                         document.getElementById("subcategory").options[3]=new Option("METS","mets");
+                         document.getElementById("subcategory").options[4]=new Option("MODS","mods");
+                         document.getElementById("subcategory").options[5]=new Option("VRA Core","vra");
+                         break;
+                     case "mets" :
+                         document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+			document.getElementById("subcategory").options[1]=new Option("BIBFRAME","bib");
+                         document.getElementById("subcategory").options[2]=new Option("Dublin Core","dc");
+                         document.getElementById("subcategory").options[3]=new Option("MARC","marc");
+                         document.getElementById("subcategory").options[4]=new Option("MODS","mods");
+                         document.getElementById("subcategory").options[5]=new Option("VRA Core","vra");
+                         break;
+                     case "mods" :
+                         document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+   			 document.getElementById("subcategory").options[1]=new Option("BIBFRAME","bib");
+                         document.getElementById("subcategory").options[2]=new Option("Dublin Core","dc");
+                         document.getElementById("subcategory").options[3]=new Option("MARC","marc");
+                         document.getElementById("subcategory").options[4]=new Option("METS","mets");
+                         document.getElementById("subcategory").options[5]=new Option("VRA Core","vra");
+                         break;
                     case "vra" :
-                        document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
-                        document.getElementById("subcategory").options[1]=new Option("Dublin Core","dc");
-                        document.getElementById("subcategory").options[2]=new Option("MARC","marc");
-                        document.getElementById("subcategory").options[3]=new Option("METS","mets");
-                        document.getElementById("subcategory").options[4]=new Option("MODS","MODS");
-                        break;
+                         document.getElementById("subcategory").options[0]=new Option("Select a Standard","");
+ 			 document.getElementById("subcategory").options[1]=new Option("BIBFRAME","bib");
+                         document.getElementById("subcategory").options[2]=new Option("Dublin Core","dc");
+                         document.getElementById("subcategory").options[3]=new Option("MARC","marc");
+                         document.getElementById("subcategory").options[4]=new Option("METS","mets");
+                         document.getElementById("subcategory").options[5]=new Option("MODS","MODS");
+                         break;
                 }
                 return true;
             }
@@ -73,6 +87,7 @@
 <form id="submitUrl">
             <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
                 <option value="">Select a Standard</option>
+		<option value="bib">BIBFRAME</option>
                 <option value="dc">Dublin Core</option>
                 <option value="marc">MARC</option>
                 <option value="mets">METS</option>
